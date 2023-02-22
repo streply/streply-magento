@@ -7,7 +7,6 @@
         "sort-packages": true
     },
     "require": {
-        "php": "^7.4.0",
         "magento/framework": "103.0.*",
         "streply/streply-php": "*"
     },
