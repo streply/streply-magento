@@ -1,0 +1,23 @@
+{
+    "name": "streply/streply-magento",
+    "description": "Streply SDK for Magento e-commerce software",
+    "type": "magento2-module",
+    "license": "MIT",
+    "config": {
+        "sort-packages": true
+    },
+    "require": {
+        "php": "~7.4.0",
+        "magento/framework": "103.0.*",
+        "streply/streply-php": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Streply\\StreplyMagento\\": ""
+        }
+    }
+}
+
