@@ -70,12 +70,16 @@ class Data extends AbstractHelper
     public function initialize(): void
     {
         try {
-            \Streply\Initialize(
-				$this->getConfigValue(self::XML_PATH_API_KEY),
-				[
-					'storeProvider' => new RequestProvider()
-				]
-			);
+			$dsn = $this->getConfigValue(self::XML_PATH_API_KEY);
+
+			if(null !== $dsn) {
+				\Streply\Initialize(
+					$dsn,
+					[
+						'storeProvider' => new RequestProvider()
+					]
+				);
+			}
         } catch (StreplyException $e) {
             throw new \Exception($e);
         }
